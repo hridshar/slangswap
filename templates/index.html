@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SlangSwap</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💬 SlangSwap</h1>
+    <p>Convert Gen Z slang into formal English</p>
+
+    <form method="POST">
+      <textarea name="slang" placeholder="Type your Gen Z sentence here..." required></textarea>
+      <button type="submit">Translate</button>
+    </form>
+
+    {% if translation %}
+      <div class="result">
+        <h2>🧾 Formal Translation</h2>
+        <p>{{ translation }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
